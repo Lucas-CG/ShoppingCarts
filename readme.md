@@ -5,7 +5,8 @@ O código lê 1 ou mais arquivos .json com registros de acessos a páginas de pr
 A saída é registrada na pasta *output*. Exemplos de arquivos de entrada e saída foram adicionados às duas pastas.
 
 Os arquivos de entrada esperados contêm multiplas linhas no formato do exemplo abaixo:
-  {"timestamp": "2019-01-01 13:02:00", "customer": "customer-x", "product": "product-x"}
+
+`{"timestamp": "2019-01-01 13:02:00", "customer": "customer-x", "product": "product-x"}`
 
 Permite-se que o usuário adicione mais de um item ao seu carrinho.
 
@@ -17,33 +18,33 @@ Portanto, é necessário que ambos estejam instalados no seu sistema, além do g
 
 ### Python3:
 
-Instale-o com o seu gerenciador de pacotes. Seguem alguns exemplos para diferentes plataformas:
+Instale-o com o seu gerenciador de pacotes. Seguem alguns exemplos para diferentes plataformas.
 
-Ubuntu/Debian:
+#### Ubuntu/Debian
 
-  apt install python3 python3-pip
+`apt install python3 python3-pip`
 
-Fedora/Red Hat:
+#### Fedora/Red Hat
 
-  dnf install python3 python3-pip
+`dnf install python3 python3-pip`
 
-Mac:
+#### Mac
 
-  brew install python3
+`brew install python3`
 
-(Certifique-se de que o brew esteja instalado)
+(Certifique-se de que o *brew* esteja instalado)
 
 ### Apache Beam
 
 Use o pip3 para instalá-lo:
 
-  pip3 install apache-beam
+`pip3 install apache-beam`
 
 ### Execução
 
 Para utilizar o executável, faça um *clone* do repositório. Execute o código carts.py. Não é necessário especificar argumentos na linha de comando:
 
-  python3 carts.py
+`python3 carts.py`
 
 ### Verificação dos resultados:
 
@@ -53,7 +54,7 @@ Há dois arquivos de entrada, nomeados *page-views.json* e *page-views2.json*, l
 
 A lida deles mostra que as linhas de saída esperadas são:
 
-  {"timestamp": "2019-01-01 13:02:00", "customer": "customer-2", "product": "product-2"}
-  {"timestamp": "2019-01-01 16:30:00", "customer": "customer-4", "product": "product-2, product-3"}
+`{"timestamp": "2019-01-01 13:02:00", "customer": "customer-2", "product": "product-2"}`
+`{"timestamp": "2019-01-01 16:30:00", "customer": "customer-4", "product": "product-2, product-3"}`
 
 Isto poderá ser analisado com uma nova execução do código.
